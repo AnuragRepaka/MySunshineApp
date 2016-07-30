@@ -89,6 +89,7 @@ public class ForecastFragment extends Fragment {
                         weekForecast);
 
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        mForecastAdapter.notifyDataSetChanged();
 
         // Get a reference to the ListView, and attach this adapter to it.
         ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
@@ -183,14 +184,14 @@ public class ForecastFragment extends Fragment {
             return null;
         }
         protected void onPostExecute(String[] result) {
-                       if (result != null) {
-                                mForecastAdapter.clear();
-                                for(String dayForecastStr : result) {
-                                        mForecastAdapter.add(dayForecastStr);
-                                    }
-                                // New data is back from the server.  Hooray!
-                                    }
-                    }
+            if (result != null) {
+                mForecastAdapter.clear();
+                for(String dayForecastStr : result) {
+                    mForecastAdapter.add(dayForecastStr);
+                }
+                // New data is back from the server.  Hooray!
+            }
+        }
         private String getReadableDateString(long time){
             // Because the API returns a unix timestamp (measured in seconds),
             // it must be converted to milliseconds in order to be converted to valid date.
