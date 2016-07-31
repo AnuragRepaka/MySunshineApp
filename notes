@@ -1,0 +1,10 @@
+connection to network
+https://developer.android.com/training/basics/network-ops/connecting.html
+
+background thread for network calls, database calls, decoding bitmaps.
+
+process & threads
+https://developer.android.com/guide/components/processes-and-threads.html#Threads
+
+AsyncTask
+https://developer.android.com/reference/android/os/AsyncTask.html
