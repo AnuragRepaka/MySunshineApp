@@ -5,14 +5,8 @@
 
     <item
         android:id="@+id/action_refresh"
-        android:title="Refresh"
+        android:title="@string/title_menu_refresh"
         app:showAsAction="never"
         />
-    <item
-        android:id="@+id/action_setting"
-        android:title="Settings"
-        app:showAsAction="never"
-        />
-
 
 </menu>
